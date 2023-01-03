@@ -13,6 +13,7 @@
 		34F15B9C2960C0E000A40C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F15B9A2960C0E000A40C06 /* Main.storyboard */; };
 		34F15B9E2960C0E100A40C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34F15B9D2960C0E100A40C06 /* Assets.xcassets */; };
 		34F15BA12960C0E100A40C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34F15B9F2960C0E100A40C06 /* LaunchScreen.storyboard */; };
+		34F15BA92964F4B700A40C06 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F15BA82964F4B700A40C06 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		34F15B9D2960C0E100A40C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34F15BA02960C0E100A40C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		34F15BA22960C0E100A40C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34F15BA82964F4B700A40C06 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				34F15B9D2960C0E100A40C06 /* Assets.xcassets */,
 				34F15B9F2960C0E100A40C06 /* LaunchScreen.storyboard */,
 				34F15BA22960C0E100A40C06 /* Info.plist */,
+				34F15BA82964F4B700A40C06 /* TableViewController.swift */,
 			);
 			path = ProjectFour;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 				34F15B992960C0E000A40C06 /* ViewController.swift in Sources */,
 				34F15B952960C0E000A40C06 /* AppDelegate.swift in Sources */,
 				34F15B972960C0E000A40C06 /* SceneDelegate.swift in Sources */,
+				34F15BA92964F4B700A40C06 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
