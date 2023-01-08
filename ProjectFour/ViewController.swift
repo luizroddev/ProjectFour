@@ -12,7 +12,9 @@ class ViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
     var progressView: UIProgressView!
-    var websites = ["apple.com", "hackingwithswift.com"]
+    var websites: [String] = []
+    
+    var currentWebsite: String?
      
     override func loadView() {
         webView = WKWebView()
@@ -34,16 +36,18 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         let goBack = UIBarButtonItem(barButtonSystemItem: .rewind, target: webView, action: #selector(webView.goBack))
         let goForward = UIBarButtonItem(barButtonSystemItem: .fastForward, target: webView, action: #selector(webView.goForward))
-        
+         
         
         toolbarItems = [goBack, goForward, progressButton, spacer, refresh]
         navigationController?.isToolbarHidden = false
         
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
     
-        let url = URL(string: "https://" + websites[0])!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
+        if let localWebsite = currentWebsite {
+            let url = URL(string: "https://" + localWebsite)!
+            webView.load(URLRequest(url: url))
+            webView.allowsBackForwardNavigationGestures = true
+        }
     }
     
     @objc func openTapped() {
@@ -59,6 +63,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
     func openPage(action: UIAlertAction) {
         guard let actionTitle = action.title else { return }
         guard let url = URL(string: "https://" + actionTitle) else { return }
+        webView.load(URLRequest(url: url))
+    }
+    
+    func openPage(websiteIndex: Int) {
+        guard let url = URL(string: "https://" + websites[websiteIndex]) else { return }
         webView.load(URLRequest(url: url))
     }
 
